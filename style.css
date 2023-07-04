@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #cd8023; /* orange */
+  --accent-color: #ffc107; /* Yellow */
+  --red-color: #c55362; /* Light red */
+  --green-color: #79cd73; /* green */
+}
+
+body {
+  background: gray;
+}
+.container {
+  height: 500px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.container div {
+  width: 150px;
+  height: 150px;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 6px;
+  transition: all 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box1 {
+  /* Flex-grow: it will the grow the box if there's enough space. */
+  flex-grow: 2;
+  background: var(--primary-color);
+
+  /* flex shrink: defines how fast one item shrinks in comparison to the others if I set box 1 to have a flex shrink of 5 the box 1 will shrink much faster than other boxes */
+  flex-shrink: 5;
+}
+.box2 {
+  background: var(--secondary-color);
+}
+.box3 {
+  background: var(--accent-color);
+}
+.box4 {
+  background: var(--red-color);
+}
+.box5 {
+  background: var(--green-color);
+}
+
+/* @media screen and (max-width: 800px) {
+  .box3 {
+    order: 1;
+  }
+  .box5 {
+    order: 2;
+  }
+  .box2 {
+    order: 3;
+  }
+
+  .box1 {
+    order: 4;
+  }
+
+  .box4 {
+    order: 5;
+  }
+} */
